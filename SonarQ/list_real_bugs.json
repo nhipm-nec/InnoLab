@@ -1,0 +1,50 @@
+{
+  "bugs": [
+    {
+      "action": "Fix",
+      "bug_id": "bearer_python_lang_avoid_pickle_2ab566f4626ba782f8b844847ee13ee5_0",
+      "classification": "True Positive",
+      "reason": "The code uses the `pickle` library, which is known to be vulnerable to arbitrary code execution. RAG: bearer_python_lang_avoid_pickle",
+      "rule_description": "Usage of unsafe Pickle libraries. ## Description\n\nUsing pickle, _pickle and cPickle can make your application vulnerable to unsafe code execution. This is because the deserialization logic of these libraries allows for arbitrary code ...",
+      "rule_key": "python_lang_avoid_pickle",
+      "type": "vulnerability"
+    },
+    {
+      "action": "Fix",
+      "bug_id": "bearer_python_lang_insecure_http_1a40d1e59318a984b9bcc72943fe359d_0",
+      "classification": "True Positive",
+      "reason": "The code uses an insecure HTTP connection, which makes data susceptible to interception. RAG: bearer_python_lang_insecure_http",
+      "rule_description": "Usage of insecure HTTP connection. ## Description\n\nYour application is at risk when it connects to APIs using insecure HTTP connections. This vulnerability occurs because HTTP lacks encryption, making data susceptible to interception a...",
+      "rule_key": "python_lang_insecure_http",
+      "type": "vulnerability"
+    },
+    {
+      "action": "Fix",
+      "bug_id": "bearer_python_lang_jwt_verification_bypass_e9354856bd37f360557fe031594d8ce1_0",
+      "classification": "True Positive",
+      "reason": "The code is missing signature verification of JWT, which compromises the security of the application. RAG: bearer_python_lang_jwt_verification_bypass",
+      "rule_description": "Missing signature verification of JWT. ## Description\n\nFailing to verify the signature of JSON Web Tokens (JWTs) compromises the security of an application. Signature verification is crucial for confirming the authenticity and integrity of...",
+      "rule_key": "python_lang_jwt_verification_bypass",
+      "type": "vulnerability"
+    },
+    {
+      "action": "Fix",
+      "bug_id": "bearer_python_lang_ssl_verification_3a86aeb6d83e405164dd12eb62a08335_0",
+      "classification": "True Positive",
+      "reason": "The code is missing SSL certificate verification, which can compromise the security of sensitive data. RAG: bearer_python_lang_ssl_verification",
+      "rule_description": "Missing SSL certificate verification. ## Description\n\nMissing or optional SSL certificate verification can compromise the security of sensitive data. This vulnerability arises when an application fails to check for valid SSL certificates ...",
+      "rule_key": "python_lang_ssl_verification",
+      "type": "vulnerability"
+    },
+    {
+      "action": "Fix",
+      "bug_id": "bearer_python_lang_weak_hash_md5_0c3a72e8a01a6840172a84d4cb8a6b4d_0",
+      "classification": "True Positive",
+      "reason": "The code uses the MD5 hashing library, which is vulnerable to collision attacks. RAG: bearer_python_lang_weak_hash_md5",
+      "rule_description": "Usage of weak hashing library (MDx). ## Description\n\nUsing a weak hashing library, such as MD5, increases the risk of data breaches. MD5 itself is vulnerable to collision attacks, where two different inputs can produce the same hash valu...",
+      "rule_key": "python_lang_weak_hash_md5",
+      "type": "vulnerability"
+    }
+  ],
+  "bugs_to_fix": 5
+}

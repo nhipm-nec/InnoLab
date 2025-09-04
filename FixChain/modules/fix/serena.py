@@ -10,7 +10,7 @@ from .base import Fixer
 
 
 class SerenaFixer(Fixer):
-    """Fixer that uses Serena toolkit for precision code editing with AI assistance"""
+    """Fixer that uses Serena.AI toolkit for precision code editing with AI assistance"""
     
     def __init__(self, scan_directory: str):
         self.scan_directory = scan_directory
